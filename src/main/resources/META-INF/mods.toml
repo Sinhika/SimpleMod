@@ -1,0 +1,46 @@
+# The overall format is standard TOML format, v0.5.0.
+# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
+modLoader="javafml" #mandatory
+
+# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
+loaderVersion="[31,)" #mandatory
+issueTrackerURL="https://github.com/Sinhika/simplemod/issues"
+
+[[mods]]
+modId="simplemod"
+version="${version}"
+displayName="Somebody's SimpleMod"
+updateJSONURL="https://raw.githubusercontent.com/Sinhika/simplemod/1.15/update.json"
+displayURL="CurseForge URL"
+credits="Thanks to akkamaddi for creating the original mod and to Sinhika for porting and maintaining it."
+authors="akkamaddi, Sinhika"
+description='''a template for additional add-ons
+'''
+
+[[dependencies.simplemod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31.2.26,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.simplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.simplemod]]
+    modId="simpleores"
+    mandatory=true
+    versionRange="[1.15.2-2.1.8.0,]"
+    ordering="NONE"
+    side="BOTH"    
+
+[[dependencies.simplemod]]
+    modId="fusion"
+    mandatory=true
+    versionRange="[1.15.2-2.5.11,]"
+    ordering="NONE"
+    side="BOTH"    
