@@ -220,6 +220,15 @@ public class SimpleDataGenerator
           
             // blasting
             CookingRecipeBuilder
+            .blastingRecipe(
+                    Ingredient.fromItems(ModItems.foo_axe.get(),
+                            ModItems.foo_hoe.get(), ModItems.foo_pickaxe.get(),
+                            ModItems.foo_shovel.get(), ModItems.foo_sword.get()),
+                    ModItems.foo_nugget.get(), 0.4F, 100)
+            .addCriterion("has_item", hasItem(ModItems.foo_axe.get()))
+            .build(consumer, new ResourceLocation(SimpleMod.MODID, "foo_nugget_from_blasting_tools"));
+
+            CookingRecipeBuilder
                     .blastingRecipe(
                             Ingredient.fromItems(ModItems.foo_boots.get(), ModItems.foo_chestplate.get(),
                                     ModItems.foo_helmet.get(), ModItems.foo_leggings.get()),
